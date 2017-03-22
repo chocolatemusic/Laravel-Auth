@@ -1,0 +1,1 @@
+สวัสดีคุณ {{$email->email}} I Love Andaman Webmaster Naja
