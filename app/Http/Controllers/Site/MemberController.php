@@ -28,9 +28,11 @@ class MemberController extends Controller
 				
 		Mail::send('site.mailtemplate', ['email' => $request], function ($m) use ($request) {
 			
-            $m->to('yokprogrammer@gmail.com', $request->get('email'))->subject('I Love Andaman Webmaster Naja');
+            		$m->to($request->get('email'), 'yokprogrammer')->subject('I Love Andaman Webmaster Naja');
 			
-			$m->cc('yotewach@hotmail.com');
+			$m->bcc($request->get('email_bcc'));
+			
+			$m->cc('chocolate_music@hotmail.com');
 			
         });
 				
